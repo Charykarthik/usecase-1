@@ -4,7 +4,7 @@ from google.cloud import storage
 def load_data_to_bigquery(data, context):
 # Extract bucket and file information from Cloud Storage event
 bucket_name = data['sceg_karthik']
-file_name = data['*.CSV']
+file_name = data['*.txt']
 
 # Set up BigQuery client and table information
 client = bigquery.Client()
