@@ -3,13 +3,13 @@ from google.cloud import storage
 
 def load_data_to_bigquery(data, context):
 # Extract bucket and file information from Cloud Storage event
-bucket_name = data['bucket']
-file_name = data['name']
+bucket_name = data['sceg_karthik']
+file_name = data['*.CSV']
 
 # Set up BigQuery client and table information
 client = bigquery.Client()
-dataset_id = 'my_dataset'
-table_id = 'my_table'
+dataset_id = 'data'
+table_id = 'karthik'
 table_ref = client.dataset(dataset_id).table(table_id)
 
 # Construct URI to Cloud Storage file
