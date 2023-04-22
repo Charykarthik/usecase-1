@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-entrypoint: 'bash'
-args:
-- '-c'
-- |
-gcloud functions deploy load_data_to_bigquery --runtime python39 --trigger-resource sceg_karthik --trigger-event google.storage.object.finalize --timeout 540s --allow-unauthenticated
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+  - gcloud functions deploy load_data_to_bigquery --runtime python39 --trigger-resource sceg_karthik --trigger-event google.storage.object.finalize --timeout 540s --allow-unauthenticated
